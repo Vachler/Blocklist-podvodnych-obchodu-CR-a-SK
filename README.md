@@ -21,4 +21,4 @@ Klikni pravým tlačítkem a zvol **"Kopírovat adresu odkazu"**:
 Zkopírujte tento odkaz a vložte jej do nastavení filtrů ve vaší aplikaci:
 
 ```text
-[https://raw.githubusercontent.com/Vachler/Blocklist-podvodnych-obchodu-CR/main/blocklist.txt](https://raw.githubusercontent.com/Vachler/Blocklist-podvodnych-obchodu-CR/main/blocklist.txt)
+https://raw.githubusercontent.com/Vachler/Blocklist-podvodnych-obchodu-CR/main/blocklist.txt
