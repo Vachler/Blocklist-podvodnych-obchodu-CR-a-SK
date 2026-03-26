@@ -29,7 +29,7 @@ Klikni pravým tlačítkem a zvol **"Kopírovat adresu odkazu"**:
 * **Zdroj:** [ČOI - Rizikové e-shopy](https://www.coi.cz/pro-spotrebitele/rizikove-e-shopy/)
 * **Počet domén:** Aktuálně cca 1000+
 * **Aktualizace:** Automaticky každou půlnoc (přes GitHub Actions)
-* **Formát:** (`||domena.cz^ pro weby a domena.cz/cesta pro podstránky`)
+* **Formát:** (`||domena.cz^`) pro weby a (`domena.cz/cesta`) pro podstránky
 
 ---
 
