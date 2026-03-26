@@ -1,5 +1,6 @@
 import requests
 import re
+from datetime import datetime
 
 def get_coi_data():
     url = "https://www.coi.cz/pro-spotrebitele/rizikove-e-shopy/"
@@ -9,13 +10,13 @@ def get_coi_data():
         r = requests.get(url, headers=headers, timeout=30)
         r.encoding = 'utf-8'
         
-        # Tato část najde domény v textu stránky ČOI spolehlivěji
-        # Hledáme text mezi tagy, které ČOI používá pro názvy e-shopů
+        # Hledáme domény v textu stránky ČOI (mezi <span> tagy)
         found = re.findall(r'<span>([a-z0-9.-]+\.[a-z]{2,10})</span>', r.text.lower())
         
         for d in found:
-            clean = d.strip()
-            if '.' in clean and len(clean) > 3:
+            clean = d.strip().strip('.')
+            if '.' in clean and len(clean) > 4:
+                # Teď už ukládáme všechno bez kontroly proti whitelistu
                 domains.add(clean)
     except Exception as e:
         print(f"Chyba při stahování: {e}")
@@ -23,14 +24,18 @@ def get_coi_data():
 
 if __name__ == "__main__":
     domains = get_coi_data()
-    # Seřadíme a přidáme formát pro AdGuard ||...^
     final_list = sorted([f"||{d}^" for d in domains])
 
     if final_list:
         with open("blocklist.txt", "w", encoding="utf-8") as f:
-            f.write("! Title: Rizikove e-shopy COI.cz\n")
-            f.write(f"! Total items: {len(final_list)}\n")
-            f.write("! Last update: 2026\n\n")
+            # Profesionální hlavička s mřížkami
+            f.write("# ===============================================================\n")
+            f.write("# NÁZEV: Blocklist rizikových e-shopů (zdroj COI.cz)\n")
+            f.write(f"# AKTUALIZOVÁNO: {datetime.now().strftime('%d.%m.%Y %H:%M')}\n")
+            f.write(f"# POČET POLOŽEK: {len(final_list)}\n")
+            f.write("# FORMÁT: AdGuard / uBlock Origin / Pi-hole\n")
+            f.write("# PROJEKT: https://github.com/Vachler/Blocklist-podvodnych-obchodu-CR\n")
+            f.write("# ===============================================================\n\n")
             f.write("\n".join(final_list))
         print(f"Hotovo! Nalezeno {len(final_list)} domén.")
     else:
