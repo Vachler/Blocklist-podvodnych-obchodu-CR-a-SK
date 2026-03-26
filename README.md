@@ -16,11 +16,10 @@ Neopisujte domény ručně. Stačí zkopírovat tento odkaz do vašeho blokátor
 ```text
 https://raw.githubusercontent.com/Vachler/Blocklist-podvodnych-obchodu-CR/main/blocklist.txt
 ```
-<div align="center">
-nebo
+
+#### nebo
 
 Klikni pravým tlačítkem a zvol **"Kopírovat adresu odkazu"**:
-</div>
 
 👉 **[https://raw.githubusercontent.com/Vachler/Blocklist-podvodnych-obchodu-CR/main/blocklist.txt](https://raw.githubusercontent.com/Vachler/Blocklist-podvodnych-obchodu-CR/main/blocklist.txt)**
 
