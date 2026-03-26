@@ -1,6 +1,6 @@
 # 🛡️ Blocklist podvodných e-shopů (ČOI)
 
-Tento projekt automaticky generuje seznam rizikových e-shopů pro blokátory typu **AdGuard**, **uBlock Origin** nebo **Pi-hole**. Data jsou čerpána přímo z oficiálního webu **České obchodní inspekce**.
+Tento projekt automaticky generuje seznam rizikových e-shopů pro blokátory typu **AdGuard**, **uBlock Origin** nebo **Pi-hole (v5.0+)**. Data jsou čerpána přímo z oficiálního webu **České obchodní inspekce**.
 
 ---
 
@@ -13,9 +13,6 @@ Klikni pravým tlačítkem a zvol **"Kopírovat adresu odkazu"**:
 
 ### ℹ️ Informace o seznamu
 * **Zdroj:** [ČOI - Rizikové e-shopy](https://www.coi.cz/pro-spotrebitele/rizikove-e-shopy/)
-* **Počet domén:** Aktuálně cca 980+
+* **Počet domén:** Aktuálně cca 950+
 * **Aktualizace:** Automaticky každou půlnoc (přes GitHub Actions)
 * **Formát:** AdGuard/uBlock kompatibilní (`||domena.cz^`)
-
-### 🛠️ Jak to funguje?
-Na pozadí běží Python skript, který prohledá web ČOI, vytáhne názvy e-shopů, pročistí je od systémových webů (whitelist) a uloží je do souboru `blocklist.txt`. Vše probíhá v cloudu GitHubu, takže tvůj počítač nemusí být zapnutý.
