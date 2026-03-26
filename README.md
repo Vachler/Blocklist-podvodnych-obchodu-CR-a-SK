@@ -16,6 +16,10 @@ Neopisujte domény ručně. Stačí zkopírovat tento odkaz do vašeho blokátor
 ```text
 https://raw.githubusercontent.com/Vachler/Blocklist-podvodnych-obchodu-CR/main/blocklist.txt
 ```
+nebo
+
+👉 **[https://raw.githubusercontent.com/Vachler/Blocklist-podvodnych-obchodu-CR/main/blocklist.txt](https://raw.githubusercontent.com/Vachler/Blocklist-podvodnych-obchodu-CR/main/blocklist.txt)**
+
 ---
 
 ### ℹ️ Informace o seznamu
@@ -25,12 +29,16 @@ Počet domén: Aktuálně cca 1000+
 Aktualizace: Automaticky každou půlnoc (přes GitHub Actions)
 Formát: AdGuard/uBlock kompatibilní ( ||domena.cz^ pro weby a domena.cz/cesta pro podstránky )
 
+---
+
 ### 🛠️ Podporované nástroje
 Tento seznam je optimalizován pro nejoblíbenější nástroje na ochranu soukromí:
 
 AdGuard (Mobil i Desktop)
 uBlock Origin (Prohlížeč)
 Pi-hole (Celá domácí síť)
+
+---
 
 ### 💡 Proč to používat?
 Podvodné weby vznikají a zanikají během hodin. Díky tomuto skriptu nemusíte sledovat zprávy ani web ČOI – váš blokátor se každou noc "naučí" rozpoznat nové hrozby, které inspekce odhalila.
