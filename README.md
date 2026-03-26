@@ -16,6 +16,7 @@ Neopisujte domény ručně. Stačí zkopírovat tento odkaz do vašeho blokátor
 ```text
 https://raw.githubusercontent.com/Vachler/Blocklist-podvodnych-obchodu-CR/main/blocklist.txt
 ```
+
 nebo
 
 Klikni pravým tlačítkem a zvol **"Kopírovat adresu odkazu"**:
