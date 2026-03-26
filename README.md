@@ -72,5 +72,5 @@ Tyto nástroje filtrují provoz na úrovni DNS (domén). Pokud seznam obsahuje k
 ---
 ![Návštěvnost](https://komarev.com/ghpvc/?username=Vachler-coi-blocklist&color=green&style=square&label=NÁVŠTĚVNOST)
 
-| $\color{yellow}{\large\textsf{\textbf{NEBO}}}$ |
+| $\color{gold}{\normalsize\textsf{\textbf{NEBO}}}$ |
 | :--- |
