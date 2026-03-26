@@ -1,0 +1,1 @@
+# Blocklist-podvodnych-obchodu-CR-a-SK
