@@ -1,0 +1,28 @@
+name: Automaticka aktualizace seznamu
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Spousti se kazdou pulnoc
+  workflow_dispatch:      # Umoznuje spustit rucne tlacitkem
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Nastaveni Pythonu
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Instalace knihoven
+        run: pip install requests
+      - name: Spusteni skriptu
+        run: python update_list.py
+      - name: Ulozeni zmen
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add blocklist.txt
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Aktualizace seznamu" && git push)
